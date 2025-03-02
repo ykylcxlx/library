@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.library.mapper.UserMapper">
+    <resultMap id="userResultMap" type="com.example.library.pojo.entity.User">
+        <id column="id" property="id"/>
+        <result column="account" property="account"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <collection property="roleList" ofType="com.example.library.pojo.entity.Role">
+            <id column="r_id" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+        </collection>
+        <collection property="permissionList" ofType="com.example.library.pojo.entity.Permission">
+            <id column="p_id" property="id"/>
+            <result column="permission_name" property="permissionName"/>
+            <result column="permission_value" property="permissionValue"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectUserByAccount" resultMap="userResultMap">
+        select u.id, u.account, u.password, u.name, u.create_time, u.update_time,
+               r.id r_id, r.role_code, r.role_name, p.id p_id, p.permission_name, p.permission_value from user u
+        left join user_role ur on u.id = ur.user_id
+        left join role r on r.id = ur.role_id
+        left join role_permission rp on r.id = rp.role_id
+        left join permission p on p.id = rp.permission_id
+        where u.account = #{account}
+    </select>
+
+</mapper>
+

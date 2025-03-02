@@ -1,0 +1,31 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/library?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    username: root
+    password:
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#      password:
+#      database: 8
+#      ssl: false
+
+
+logging:
+  level:
+    com.example.library.mapper: DEBUG
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+common:
+  jwt:
+    salt:
+      secret: Y9Bgc9A2xD9C72fyaARfK9CxwaZX9BLCxIPL9CG70a29CaeSsM
