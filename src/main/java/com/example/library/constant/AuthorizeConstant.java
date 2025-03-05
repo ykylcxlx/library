@@ -1,7 +1,7 @@
 package com.example.library.constant;
 
 /**
- * @author WangYi
+ * @author zyh
  * @create 2024/7/31
  */
 public interface AuthorizeConstant {

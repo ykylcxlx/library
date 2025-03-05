@@ -5,7 +5,7 @@ import com.example.library.pojo.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @author WangYi
+ * @author ZYH
  * @create 2024/7/30
  */
 public interface UserMapper extends BaseMapper<User> {

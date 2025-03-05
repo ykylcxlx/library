@@ -6,6 +6,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.sql.Date;
+/**
+ * @author: zyh
+
+ * @version: v1.0.0
+
+ */
 
 @Data
 @EqualsAndHashCode(callSuper = true)

@@ -5,7 +5,10 @@ import com.example.library.pojo.entity.Book;
 import com.example.library.pojo.entity.User;
 import org.apache.ibatis.annotations.Param;
 
-
+/**
+ * @author zyh
+ * @create 2021/7/31
+ */
 public interface BookMapper extends BaseMapper<Book> {
     /**
      * 按账号名查询用户信息

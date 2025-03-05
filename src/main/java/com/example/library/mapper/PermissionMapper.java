@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.library.pojo.entity.Permission;
 
 /**
- * @author WangYi
+ * @author zyh
  * @create 2024/7/30
  */
 public interface PermissionMapper extends BaseMapper<Permission> {

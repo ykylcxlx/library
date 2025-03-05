@@ -8,6 +8,10 @@ import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 
+/**
+ * @author zyh
+ * @version 3.0
+ */
 
 @Data
 @EqualsAndHashCode(callSuper = true)

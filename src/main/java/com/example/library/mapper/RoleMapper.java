@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.library.pojo.entity.Role;
 
 /**
- * @author WangYi
+ * @author ZYH
  * @create 2024/7/30
  */
 public interface RoleMapper extends BaseMapper<Role> {
